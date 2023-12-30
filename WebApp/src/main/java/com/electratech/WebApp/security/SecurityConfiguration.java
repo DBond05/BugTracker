@@ -37,8 +37,8 @@ public class SecurityConfiguration {
 	
 	  @Bean public UserDetails createNewUser(String userName, String password) {
 	  Function<String, String> passwordEncoder= input ->
-	  passwordEncoder().encode(input); UserDetails userDetails
-	  =User.builder().passwordEncoder(passwordEncoder)
+	  passwordEncoder().encode(input);
+	  UserDetails userDetails =User.builder().passwordEncoder(passwordEncoder)
 	  .username(userName).password(password).roles("USER", "ADMIN").build(); return
 	  userDetails; }
 	 

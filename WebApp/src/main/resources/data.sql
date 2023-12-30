@@ -1,0 +1,1 @@
+Insert INTO Users (username, first_name, last_name,password,match_password, roles)VALUES ('Demo', 'Demo', 'Demo', 'demo','demo', 'admin');

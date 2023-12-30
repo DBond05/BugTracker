@@ -1,0 +1,5 @@
+package com.electratech.bugTracker.controller;
+
+public class BugController {
+
+}

@@ -1,0 +1,8 @@
+package com.electratech.bugTracker.controller;
+@Controller
+
+@RequestMapping(path="/electra-tech")
+public class BugController {
+	
+
+}

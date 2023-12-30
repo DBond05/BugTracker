@@ -1,0 +1,18 @@
+package com.electratech.bugTracker.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.electratech.bugTracker.DAO.BugRepo;
+import com.electratech.bugTracker.entity.Bug;
+
+@Service
+public class BugService {
+	 @Autowired
+	 private BugRepo repo;
+	 
+	 public Bug saveBug(Bug bug) {
+		 return repo.save(bug);
+	 }
+
+}

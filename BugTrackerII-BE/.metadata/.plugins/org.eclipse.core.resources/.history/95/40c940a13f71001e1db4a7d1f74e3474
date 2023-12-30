@@ -1,0 +1,5 @@
+package com.electratech.bugTracker.service;
+
+public class BugService {
+
+}

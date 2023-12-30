@@ -1,0 +1,98 @@
+package com.electratech.bugTracker.entity;
+
+import java.util.Date;
+
+import org.hibernate.annotations.CreationTimestamp;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+@Entity
+public class Bug {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
+	private String projectName;
+	private Enum<?> issueType;
+	private String Description;
+	private String troubleShooting;
+	private boolean isResolved;
+	private String resolution;
+	@CreationTimestamp
+	private Date recordedDate;
+	private Date resolvedDate;
+	
+	
+	public Bug(String projectName, Enum<?> issueType, String description, String troubleShooting, boolean isResolved,
+			String resolution, Date recordedDate, Date resolvedDate) {
+		super();
+		this.projectName = projectName;
+		this.issueType = issueType;
+		Description = description;
+		this.troubleShooting = troubleShooting;
+		this.isResolved = isResolved;
+		this.resolution = resolution;
+		this.recordedDate = recordedDate;
+		this.resolvedDate = resolvedDate;
+	}
+	public Long getId() {
+		return id;
+	}
+	public String getProjectName() {
+		return projectName;
+	}
+	public void setProjectName(String projectName) {
+		this.projectName = projectName;
+	}
+	public Enum<?> getIssueType() {
+		return issueType;
+	}
+	public void setIssueType(Enum<?> issueType) {
+		this.issueType = issueType;
+	}
+	public String getDescription() {
+		return Description;
+	}
+	public void setDescription(String description) {
+		Description = description;
+	}
+	public String getTroubleShooting() {
+		return troubleShooting;
+	}
+	public void setTroubleShooting(String troubleShooting) {
+		this.troubleShooting = troubleShooting;
+	}
+	public boolean isResolved() {
+		return isResolved;
+	}
+	public void setResolved(boolean isResolved) {
+		this.isResolved = isResolved;
+	}
+	public String getResolution() {
+		return resolution;
+	}
+	public void setResolution(String resolution) {
+		this.resolution = resolution;
+	}
+	public Date getRecordedDate() {
+		return recordedDate;
+	}
+	public void setRecordedDate(Date recordedDate) {
+		this.recordedDate = recordedDate;
+	}
+	public Date getResolvedDate() {
+		return resolvedDate;
+	}
+	public void setResolvedDate(Date resolvedDate) {
+		this.resolvedDate = resolvedDate;
+	}
+	@Override
+	public String toString() {
+		return "Bug [projectName=" + projectName + ", issueType=" + issueType + ", Description=" + Description
+				+ ", troubleShooting=" + troubleShooting + ", isResolved=" + isResolved + ", resolution=" + resolution
+				+ ", recordedDate=" + recordedDate + ", resolvedDate=" + resolvedDate + "]";
+	}
+	
+	
+}

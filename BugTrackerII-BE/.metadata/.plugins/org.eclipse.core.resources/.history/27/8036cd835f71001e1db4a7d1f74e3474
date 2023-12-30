@@ -1,0 +1,49 @@
+package com.electratech.bugTracker.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.electratech.bugTracker.DAO.BugRepo;
+import com.electratech.bugTracker.entity.Bug;
+
+@Service
+public class BugService {
+	 @Autowired
+	 private BugRepo repo;
+	 //post method to save bug to database
+	 public Bug saveBug(Bug bug) {
+		 return repo.save(bug);
+	 }
+	 
+	 //get methods
+	 // load all bugs
+	 public List<Bug> getAllBugs(){
+		 return repo.findAll();
+	 }
+	// find one bug
+	 public Bug getBugById(long id){
+		 return repo.findById(id).orElse(null);
+	 }
+	 // method to delete bug
+	 public String deleteBug(Bug bug){
+		 repo.deleteById(bug.getId());
+		 return "Bug deleted from : " + bug.getProjectName();
+	 }
+	 // method to get bug to update;
+	 public Bug updateBug(Bug bug) {
+		 Bug exBug = repo.findById(bug.getId()).orElse(null);
+		 exBug.setDescription(bug.getDescription());
+		 exBug.setIssueType(bug.getIssueType());
+		 exBug.setProjectName(bug.getProjectName());
+		 exBug.setResolution(bug.getResolution());
+		 exBug.setResolved(bug.isResolved());
+		 exBug.setTroubleShooting(bug.getTroubleShooting());
+		 exBug.setResolvedDate(bug.getResolvedDate());
+		 
+		 return repo.save(exBug);
+		 
+	 }
+
+}

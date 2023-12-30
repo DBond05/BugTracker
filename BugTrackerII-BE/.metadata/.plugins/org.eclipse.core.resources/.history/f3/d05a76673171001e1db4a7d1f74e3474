@@ -1,0 +1,5 @@
+package com.electratech.bugTracker.DAO;
+
+public class BugRepo {
+
+}
