@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BuglistComponent } from './components/buglist/buglist.component';
 import { BugformComponent } from './components/bugform/bugform.component';
+import { BugdetailsComponent } from './components/bugdetails/bugdetails.component';
 
 const routes: Routes = [
   {path:'buglist', component: BuglistComponent},
   {path:'bugform', component: BugformComponent},
+  {path:'bugdetails', component: BugdetailsComponent},
   {path: '', redirectTo: '/buglist', pathMatch:'full'},
   {path: '**', redirectTo: '/buglist', pathMatch:'full'}
 ];
