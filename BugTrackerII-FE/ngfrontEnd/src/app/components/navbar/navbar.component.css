@@ -1,0 +1,17 @@
+nav {
+    background-color: rgba(230, 85, 17, 0.837);
+   
+    position: sticky;
+    margin-bottom: 1em;
+    padding-top: 1em;
+    
+}
+
+
+img{
+    border-color: black;
+    border-width: 2px;
+}
+h1{
+    color: whitesmoke;
+}

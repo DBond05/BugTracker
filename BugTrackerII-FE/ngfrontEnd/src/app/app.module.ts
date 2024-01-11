@@ -9,6 +9,9 @@ import { HttpClientModule} from '@angular/common/http';
 import { BuglistComponent } from './components/buglist/buglist.component';
 import { BugserviceService } from './services/bugservice.service';
 import { BugdetailsComponent } from './components/bugdetails/bugdetails.component';
+import { FormsModule } from '@angular/forms';
+import { YesNoPipe } from './pipes/yes-no.pipe';
+import { CapitalizeFirstLetterPipe } from './pipes/capitalize-first-letter.pipe';
 
 
 
@@ -18,12 +21,15 @@ import { BugdetailsComponent } from './components/bugdetails/bugdetails.componen
     BuglistComponent,
     BugformComponent,
     NavbarComponent,
-    BugdetailsComponent
+    BugdetailsComponent,
+    YesNoPipe,
+    CapitalizeFirstLetterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [BugserviceService],
   bootstrap: [AppComponent]

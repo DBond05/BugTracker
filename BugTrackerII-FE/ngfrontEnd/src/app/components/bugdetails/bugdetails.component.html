@@ -1,3 +1,27 @@
-<p>bugdetails works!</p>
-<button class= "btn btn-secondary btn-sm">Update</button>
-<button class= "btn btn-warning btn-sm">Delete</button>
+<div class = "container">
+<div class="detail-section">
+    <h3>{{bug.projectName}} / {{bug.issueType| titlecase}}</h3>
+    <dl>
+    <dt>Date Reported</dt>
+    <dd>{{bug.recordedDate| date: 'medium'}}</dd>
+    <dt>Description</dt>
+    <dd>{{bug.description | capitalizeFirstLetter}}</dd>
+    <dt>TroubleShooting</dt>
+    <dd>{{bug.troubleShooting |capitalizeFirstLetter}}</dd>
+    <dt>Is Resolved? </dt>
+    <dd>{{bug.resolved | yesNo}}</dd>
+    </dl>
+    <dl *ngIf="bug.resolved">
+    <dt>Resolution</dt>
+    <dd>{{bug.resolution| capitalizeFirstLetter}}</dd>
+    <dt>Resolved date</dt>
+    <dd>{{bug.updateDate| date: 'medium'}}</dd>
+    </dl>
+    <div>
+        <button routerLink="/bugform" class= "btn btn-secondary" (click)="storeBug()">Update</button>
+        <button class= "btn btn-warning" (click)="deleteBug()">Delete</button>
+    </div>
+    <button routerLink="/buglist" class="btn btn-primary">Back</button>
+
+</div>
+</div>

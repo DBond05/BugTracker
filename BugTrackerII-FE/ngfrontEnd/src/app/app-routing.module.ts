@@ -7,7 +7,7 @@ import { BugdetailsComponent } from './components/bugdetails/bugdetails.componen
 const routes: Routes = [
   {path:'buglist', component: BuglistComponent},
   {path:'bugform', component: BugformComponent},
-  {path:'bugdetails', component: BugdetailsComponent},
+  {path:'buglist/:id', component: BugdetailsComponent},
   {path: '', redirectTo: '/buglist', pathMatch:'full'},
   {path: '**', redirectTo: '/buglist', pathMatch:'full'}
 ];

@@ -1,1 +1,35 @@
-<p>bugform works!</p>
+<div class="constainer">
+    <form autocomplete="on" #updateBugForm="ngForm">
+        <!-- {{updateBugForm.value| json}} -->
+        <fieldset class="form-group">
+            <legend> Report or Update</legend>
+            <label for="projectName">Project Name</label>
+            <input type="text" id="projectName" class="form-control" [(ngModel)]="storedBug.projectName" name="projectName"> <br>
+            <label for="issueType">Issue Type</label>
+            <input type="text" id="issueType" class="form-control" [(ngModel)]="storedBug.issueType" name="issueType"> <br>
+            <label for="description">Description</label>
+            <input type="text" id="description" class="form-control" [(ngModel)]="storedBug.description" name="description"> <br>
+            <label for="troubleShooting">Trouble shooting</label>
+            <textarea id="troubleShooting" class="form-control" [(ngModel)]="storedBug.troubleShooting" name="troubleShooting"></textarea>
+        </fieldset>
+
+
+        <fieldset class="form-group">
+            <legend> Resolution</legend>
+
+            <input type="checkbox" id="resolved" class="form-check-input" [(ngModel)]="storedBug.resolved" name="resolved">
+            <label for="resolved" class="form-check-label">Is resolved?</label>
+            <br>
+            <br>
+            <label for="resolution">Resolution</label>
+            <input type="text" id="resolution" class="form-control" [(ngModel)]="storedBug.resolution" name="resolution">
+
+        </fieldset>
+
+    </form>
+    <div class="buttons">
+        <button  class="btn btn-info"(click)=onSubmit()>Save</button>
+        <button  class="btn btn-warning" (click)="clearForm()">Clear</button>
+        <button  class="btn btn-success" (click)="back()">Back</button>
+    </div>
+</div>
