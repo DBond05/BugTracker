@@ -1,2 +1,2 @@
 # bugtracker
-Sample Spring Boot 
+Sample Spring Boot / Angular
