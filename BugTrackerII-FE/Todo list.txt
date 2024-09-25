@@ -1,0 +1,17 @@
+ # Todo list
+ ###BugList component
+  - implement search function
+  - Add bug button routerlink to form component
+ ### Form component
+ - complete form html and ts
+ -add constraints & validations
+ - save button functionality
+ - add character counter to troubleshooting field
+ 
+ ### Details component
+ -delete button functionality
+ - Update button routerlink to form component with details autofilled.
+ 
+ ### Service
+ -update with post put and delete methods
+ 

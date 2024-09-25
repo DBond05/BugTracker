@@ -1,6 +1,7 @@
 nav {
     background-color: rgba(230, 85, 17, 0.837);
-   
+   border-bottom: outset;
+   border-radius: 5px;
     position: sticky;
     margin-bottom: 1em;
     padding-top: 1em;
@@ -12,6 +13,7 @@ img{
     border-color: black;
     border-width: 2px;
 }
-h1{
+a {
     color: whitesmoke;
+    text-decoration: none;
 }

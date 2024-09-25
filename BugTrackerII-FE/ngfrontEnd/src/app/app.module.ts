@@ -12,6 +12,7 @@ import { BugdetailsComponent } from './components/bugdetails/bugdetails.componen
 import { FormsModule } from '@angular/forms';
 import { YesNoPipe } from './pipes/yes-no.pipe';
 import { CapitalizeFirstLetterPipe } from './pipes/capitalize-first-letter.pipe';
+import { SearchComponent } from './components/search/search.component';
 
 
 
@@ -23,7 +24,8 @@ import { CapitalizeFirstLetterPipe } from './pipes/capitalize-first-letter.pipe'
     NavbarComponent,
     BugdetailsComponent,
     YesNoPipe,
-    CapitalizeFirstLetterPipe
+    CapitalizeFirstLetterPipe,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

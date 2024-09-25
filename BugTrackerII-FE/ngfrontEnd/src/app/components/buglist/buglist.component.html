@@ -20,11 +20,19 @@
                     <td>{{bug.description |capitalizeFirstLetter}}</td>
                     <td>{{bug.recordedDate | date: 'medium'}}</td>
                     <td>{{bug.resolved | yesNo}}</td>
-                    <td><button class= "btn btn-info btn-sm" routerLink="/buglist/{{bug.id}}">Info</button></td>
+                    <td><button class= "btn btn-info btn-sm pe-3 ps-3" routerLink="/buglist/{{bug.id}}">Info</button></td>
                      
                     </tr>
                 
             </tbody>
         </table>
-        <a href="add-bug" routerLink="/bugform" class = "btn btn-success"> Add Bug</a>
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <div class="pagination">
+              <button class="btn btn-dark btn-sm page-item" (click)="goToPreviousPage()" [disabled]="currentPage === 0">Previous</button>
+              <label class="page-item" for="page" class="mx-2">Page {{ currentPage + 1 }} of {{ totalPages }}</label>
+              <button class="btn btn-dark btn-sm page-item" (click)="goToNextPage()" [disabled]="currentPage === totalPages - 1">Next</button>
+            </div>
+            <a href="add-bug" routerLink="/bugform" class="btn btn-success">Add Bug</a>
+          </div>
+          
         </div>

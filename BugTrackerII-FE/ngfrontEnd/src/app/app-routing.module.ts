@@ -8,6 +8,8 @@ const routes: Routes = [
   {path:'buglist', component: BuglistComponent},
   {path:'bugform', component: BugformComponent},
   {path:'buglist/:id', component: BugdetailsComponent},
+  {path: 'search/:keyword', component: BuglistComponent},
+  {path: 'search/', redirectTo: '/buglist', pathMatch:'full'},
   {path: '', redirectTo: '/buglist', pathMatch:'full'},
   {path: '**', redirectTo: '/buglist', pathMatch:'full'}
 ];

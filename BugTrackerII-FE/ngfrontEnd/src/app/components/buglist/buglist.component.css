@@ -1,0 +1,22 @@
+.btn-info{
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+  
+}
+button{
+    text-align: center;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+button:hover{  
+    background-color: #111212;
+    color: #fff;
+    }
+  button:active{
+    background-color: #111212;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);;
+    transform: translateY(4px);
+  }
